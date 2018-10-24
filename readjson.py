@@ -18,8 +18,8 @@ def get_weather_info():
     city_code = get_city_code(city)
     weather_info = requests.get(WEATHER_API.format(city_code), headers=HEADERS).json()
     print(weather_info["data"]["forecast"][1])
-    print(weather_info["data"])
-    print(weather_info)
+   # print(weather_info["data"])
+   # print(weather_info)
 
 
 
