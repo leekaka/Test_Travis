@@ -46,8 +46,6 @@ def get_date(info_data):
     return "{}-{}-{}".format(date[:4],date[4:6],date[6:]),week
 
 
-
-
 def get_content():
     w_info = get_weather_info()
     _date,_week = get_date(w_info)

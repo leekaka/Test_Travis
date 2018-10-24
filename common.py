@@ -29,8 +29,6 @@ def get_married_days():
     return (today - anniversary).days
 
 
-
-
 if __name__ == "__main__":
     print(get_married_days())
 
