@@ -13,29 +13,23 @@ from email.mime.text import MIMEText
 from email import encoders
 from email.utils import parseaddr ,formataddr
 
+from common import *
+from get_weather_info import *
 
 print(__doc__)
-
-MAIL_ENCODING = "utf-8"
 
 def formatAddr(s):
     name, addr = parseaddr(s)
     return formataddr((Header(name,MAIL_ENCODING).encode(), addr))
 
-mail_host = "smtp.163.com"
 
-sender = os.environ['mail_send']
-password = os.environ['password']
-receivers = os.environ['mail_rece']
-
-
-content = "邮件..,内容待更新"
+content = get_content()
 
 def sendMail():
     message = MIMEText(content,'plain','utf-8')
-    message['From'] = formatAddr('管理员<%s>'%sender)
-    message['To'] = formatAddr('接收<%s>'%receivers)
-    subject = "你好"
+    message['From'] = formatAddr('老公<%s>'%sender)
+    message['To'] = formatAddr('亲爱的<%s>'%receivers)
+    subject = "每日请安"
     message['subject'] = Header(subject,MAIL_ENCODING).encode()
 
     try:
@@ -48,6 +42,7 @@ def sendMail():
 
     except smtplib.SMTPException as e:
         print("error: %s"%e)
+
 
 
 if __name__ =="__main__":
