@@ -9,6 +9,6 @@ notifications:
 python:
   - 3.5
 before_install:
-  - pip333 install -r requirements.txt
+  - pip3 install -r requirements.txt
 script:
-  - python3 send_email.py
+  - python3 test.py
