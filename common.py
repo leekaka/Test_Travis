@@ -12,7 +12,8 @@ import datetime
 MAIL_ENCODING = "utf-8"
 mail_host = "smtp.163.com"
 CITY = "北京"
-sender = os.environ['mail_send']
+sender = os.environ.get("mail_send")
+#isender = os.environ['mail_send']
 password = os.environ['password']
 receivers = os.environ['mail_rece']
 
