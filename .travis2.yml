@@ -9,6 +9,8 @@ notifications:
 python:
   - 3.6
 before_install:
-  - pip3 install -r requirements.txt
+  - pip install -r requirements.txt
+  - sudo apt-get install fonts-droid ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming
+  - sudo fc-cache -f -v
 script:
   - python3 send_email.py
