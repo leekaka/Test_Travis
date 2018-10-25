@@ -11,4 +11,4 @@ python:
 before_install:
   - pip3 install -r requirements.txt
 script:
-  - python3 send_email.py
+  - python3 get_weather_info.py
