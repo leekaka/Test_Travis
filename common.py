@@ -12,10 +12,9 @@ import datetime
 MAIL_ENCODING = "utf-8"
 mail_host = "smtp.163.com"
 CITY = "北京"
-sender = os.environ.get("mail_send")
-#isender = os.environ['mail_send']
-password = os.environ.get('password')
-receivers = os.environ.get('mail_rece')
+sender = os.environ.get('MAIL_SEND')
+password = os.environ.get('PASSWORD')
+receivers = os.environ.get('MAIL_RECE')
 
 
 GET_MARRIED = (2017,11,6)
@@ -32,6 +31,8 @@ def get_married_days():
 
 if __name__ == "__main__":
     print(get_married_days())
+    print(sender)
+    print(receivers)
 
 
 
