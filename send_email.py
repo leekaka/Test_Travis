@@ -25,7 +25,7 @@ def formatAddr(s):
 
 
 content = get_content()
-content = "lika,shishi"
+# content = "lika,shishi"
 
 def sendMail():
     message = MIMEText(content,'plain',MAIL_ENCODING)
