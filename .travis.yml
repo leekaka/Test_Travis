@@ -13,5 +13,7 @@ TRAVIS_SECURE_ENV_VARS: true
 
 before_install:
   - pip install -r requirements.txt
+  - sudo apt-get install sendmail
+  - sudo apt-get install sendmail-cf
 script:
   - python3 common.py
