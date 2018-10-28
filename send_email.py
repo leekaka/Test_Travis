@@ -28,7 +28,7 @@ content = get_content()
 content = "lika,shishi"
 
 def sendMail():
-    message = MIMEText(content,'plain','utf-8')
+    message = MIMEText(content,'plain',MAIL_ENCODING)
     message['From'] = formatAddr('老公<%s>'%sender)
     message['To'] = formatAddr('亲爱的<%s>'%receivers)
     subject = "每日请安"
