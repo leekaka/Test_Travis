@@ -33,7 +33,7 @@ def sendMail():
     message['subject'] = Header(subject,MAIL_ENCODING).encode()
 
     try:
-        s = smtplib.SMTP(mail_host,"25")
+        s = smtplib.SMTP_SSL(mail_host)
         s.login(sender,password)
         s.sendmail(sender,receivers,message.as_string())
         s.quit()
