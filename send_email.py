@@ -29,7 +29,7 @@ content = get_content()
 
 def sendMail():
     message = MIMEText(content,'plain',MAIL_ENCODING)
-    message = MIMEText('<html><body><h1>hello word</h1><p>异常网页<a href= "http://www.baidu.com">百度</a><p></body></html>', 'html', 'utf-8')
+#    message = MIMEText('<html><body><h1>hello word</h1><p>异常网页<a href= "http://www.baidu.com">百度</a><p></body></html>', 'html', 'utf-8')
     message['From'] = formatAddr('老公<%s>'%sender)
     message['To'] = formatAddr('亲爱的<%s>'%receivers)
     subject = "每日请安"
