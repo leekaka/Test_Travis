@@ -19,14 +19,14 @@ CONTENT_FROMAT = (
     "\t亲爱的，早上好:\n\n\t"
     "\n\t今天是我们结婚的第{_loving_days}天 👧：），\n"
     "\n\t让我来为你播报今日天气预报！祝你今天心情愉快！\n\n\t"
-    "{_city}明天{_weather_high}，{_weather_low}，天气 {_weather_type}，"
+    "{_city}今天{_weather_high}，{_weather_low}，天气 {_weather_type}，"
     "{_weather_notice}！\n\n\t"
 )
 
 def get_weather_info():
     city_code = get_city_code(CITY)
     weather_info = requests.get(WEATHER_API.format(city_code), headers=HEADERS).json()
-    #print(weather_info["data"]["forecast"][1])
+    # print(weather_info["data"])
     return weather_info
 
 
@@ -49,7 +49,7 @@ def get_date(info_data):
 def get_content():
     w_info = get_weather_info()
     _date,_week = get_date(w_info)
-    w_info = w_info["data"]["forecast"][1]
+    w_info = w_info["data"]["forecast"][0]
 
     return CONTENT_FROMAT.format(
         _week = _week,
