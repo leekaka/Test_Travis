@@ -16,4 +16,4 @@ before_install:
   - sudo apt-get install sendmail
   - sudo apt-get install sendmail-cf
 script:
-  - python3 common.py
+  - python3 test.py
