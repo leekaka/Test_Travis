@@ -14,8 +14,8 @@ mail_host = "smtp.163.com"
 CITY = "北京"
 sender = os.environ.get("mail_send")
 #isender = os.environ['mail_send']
-password = os.environ['password']
-receivers = os.environ['mail_rece']
+password = os.environ.get('password')
+receivers = os.environ.get('mail_rece')
 
 
 GET_MARRIED = (2017,11,6)
