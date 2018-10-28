@@ -23,9 +23,10 @@ def formatAddr(s):
     return formataddr((Header(name,MAIL_ENCODING).encode(), addr))
 
 
-content = get_content()
+
 
 def sendMail():
+    content = get_content()
     message = MIMEText(content,'plain','utf-8')
     message['From'] = formatAddr('老公<%s>'%sender)
     message['To'] = formatAddr('亲爱的<%s>'%receivers)
