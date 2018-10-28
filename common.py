@@ -16,10 +16,6 @@ sender = os.environ.get("MAIL_SEND")
 password = os.environ.get("PASSWORD")
 receivers = os.environ.get("MAIL_RECE")
 
-sender = "lika27@163.com"
-password = "garrulous0422"
-receivers = "dilik520@126.com"
-
 GET_MARRIED = (2017,11,6)
 
 
