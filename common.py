@@ -31,8 +31,7 @@ def get_married_days():
 
 if __name__ == "__main__":
     print(get_married_days())
-    print(sender)
-    print(receivers)
+
 
 
 
