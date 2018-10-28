@@ -59,7 +59,7 @@ def get_content():
      	_weather_high= w_info["high"],
      	_weather_low =    w_info["low"],
         _weather_type =   w_info["type"],
-        _weather_notice = w_info["notice"]
+        _weather_notice = w_info["notice"],
     )
 
 
