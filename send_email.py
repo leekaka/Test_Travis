@@ -31,6 +31,7 @@ def sendMail():
     message['To'] = formatAddr('亲爱的<%s>'%receivers)
     subject = "每日请安"
     message['subject'] = Header(subject,MAIL_ENCODING).encode()
+    print(content)
 
     try:
         s = smtplib.SMTP_SSL(mail_host)
