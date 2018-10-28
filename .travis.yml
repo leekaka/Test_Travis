@@ -13,9 +13,5 @@ TRAVIS_SECURE_ENV_VARS: true
 
 before_install:
   - pip install -r requirements.txt
-  - sudo apt-get install fonts-droid ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming
-  - sudo fc-cache -f -v
-  - sudo apt-get install sendmail
-  - sudo apt-get install sendmail-cf
 script:
   - python3 test.py
