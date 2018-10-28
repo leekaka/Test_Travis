@@ -24,9 +24,10 @@ def formatAddr(s):
 
 
 
+content = get_content()
+content = "lika,shishi"
 
 def sendMail():
-    content = get_content()
     message = MIMEText(content,'plain','utf-8')
     message['From'] = formatAddr('老公<%s>'%sender)
     message['To'] = formatAddr('亲爱的<%s>'%receivers)
