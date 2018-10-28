@@ -36,7 +36,7 @@ def sendMail():
     try:
         s = smtplib.SMTP_SSL(mail_host)
         s.login(sender,password)
-        s.sendmail(sender,receivers,message.as_string())
+        s.sendmail(sender,[receivers],message.as_string())
         s.quit()
 
         print("发送成功")
