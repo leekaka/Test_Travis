@@ -6,7 +6,7 @@ import smtplib
 print(sender)
 
 try:
-    s = smtplib.SMTP(mail_host,"25")
+    s = smtplib.SMTP_SSL(mail_host)
     s.login(sender,password)
     print("ok")
     s.quit()
