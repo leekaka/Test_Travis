@@ -17,7 +17,7 @@ HEADERS = {
 # 邮件内容
 CONTENT_FROMAT = (    
     "\t亲爱的，早上好:\n\t"
-    "\n\t今天是我们结婚的第{_loving_days}天：），\n"
+    "\n\t今天是我们结婚的第{_loving_days}天：）\n"
     "\n\t让我来为你播报今日天气预报！祝你今天心情愉快！\n\n\t"
     "{_city}今天{_weather_high}，{_weather_low}，天气 {_weather_type}，"
     "{_weather_notice}."
